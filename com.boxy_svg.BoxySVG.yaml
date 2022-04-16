@@ -37,8 +37,8 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-3.82.2.zip?alt=media
-        sha256: b8ecf5a1952561d24cf7244bdc9d07185b11222cb9ed8d210635e299c3b27cac
+        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-3.83.1.zip?alt=media
+        sha256: 6dbd1d06a6405fe9a7a51b36ee35adb90845354f30cdd6b38e635e437978883e
         dest: main
       - generated-sources.json
       - type: script
@@ -60,5 +60,5 @@ modules:
       # Install app metadata
       - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
       - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.desktop     $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
-      - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.svg  $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
-      - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.png  $FLATPAK_DEST/share/icons/hicolor/128x128/apps/$FLATPAK_ID.svg
+      - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.svg         $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+      - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.png         $FLATPAK_DEST/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
