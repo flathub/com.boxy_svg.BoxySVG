@@ -15,7 +15,6 @@ finish-args:
   - --share=network
   - --socket=x11
   - --socket=pulseaudio
-  - --filesystem=xdg-data
   - --filesystem=xdg-desktop
   - --filesystem=xdg-documents
   - --filesystem=xdg-download
@@ -38,7 +37,7 @@ modules:
     sources:
       - type: archive
         url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-3.89.10.zip?alt=media
-        sha256: e52d1f56aa963d81146c16de5499b0948d8579114aaaf0270d09f4d5aa455d3b
+        sha256: c6a260536cc72ab4ef39fffdc6a86c5f407c5ba4fc51e83a9168243a6370c15a
         dest: main
       - generated-sources.json
       - type: script
