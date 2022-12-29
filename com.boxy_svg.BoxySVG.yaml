@@ -32,12 +32,13 @@ modules:
         XDG_CACHE_HOME: /run/build/boxy-svg/flatpak-node/cache
         npm_config_cache: /run/build/boxy-svg/flatpak-node/npm-cache
         npm_config_nodedir: /usr/lib/sdk/node14
+        npm_config_no_save: "true"
         npm_config_offline: "true"
     subdir: main
     sources:
       - type: archive
         url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-3.95.0.zip?alt=media
-        sha256: ade9f7987e3cb459bbfcefafa2022c155e4985f29f4b0fda2710040d651bb65d
+        sha256: 4cfa1f3f9bc1fb69054f5d8c2ed853d4cc9bfb563371199890b383599916e020
         dest: main
       - generated-sources.json
       - type: script
