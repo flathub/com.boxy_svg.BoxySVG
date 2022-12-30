@@ -37,7 +37,7 @@ modules:
     sources:
       - type: archive
         url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-3.95.0.zip?alt=media
-        sha256: 1b41b6ee5e521032370011ba0b9c509c12645679608c39df83a7465089d990cd
+        sha256: db51eb79c931302d9b9740b7bbe642c4507f7f0cec0842d8f74ab536f0579f16
         dest: main
       - generated-sources.json
       - type: script
@@ -46,12 +46,12 @@ modules:
           - zypak-wrapper.sh /app/main/boxy-svg "$@"
     build-commands:
       # Install NPM dependencies
-      - yarn install --offline
-      - yarn install --offline --cwd ./electron
+      - npm install --offline
+      - npm install --offline --prefix ./electron
       # Build the app
       - |
         . ../flatpak-node/electron-builder-arch-args.sh
-        yarn run dist -- $ELECTRON_BUILDER_ARCH_ARGS  --linux --dir
+        npm run dist -- $ELECTRON_BUILDER_ARCH_ARGS  --linux --dir
       # Bundle app and dependencies
       - cp -a dist/linux*unpacked /app/main
       # Install app wrapper
