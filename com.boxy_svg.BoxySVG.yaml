@@ -31,14 +31,12 @@ modules:
       env:
         XDG_CACHE_HOME: /run/build/boxy-svg/flatpak-node/cache
         npm_config_cache: /run/build/boxy-svg/flatpak-node/npm-cache
-        npm_config_nodedir: /usr/lib/sdk/node14
-        npm_config_no_save: "true"
         npm_config_offline: "true"
     subdir: main
     sources:
       - type: archive
         url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-3.95.0.zip?alt=media
-        sha256: 4cfa1f3f9bc1fb69054f5d8c2ed853d4cc9bfb563371199890b383599916e020
+        sha256: 379d9860125a94732f19e84997aaf8aa5723dc461e5bfcd17df68026b8298e2a
         dest: main
       - generated-sources.json
       - type: script
@@ -47,12 +45,12 @@ modules:
           - zypak-wrapper.sh /app/main/boxy-svg "$@"
     build-commands:
       # Install NPM dependencies
-      - npm install --offline
-      - npm install --offline --prefix ./electron
+      - yarn install --offline
+      - yarn install --offline --prefix ./electron
       # Build the app
       - |
         . ../flatpak-node/electron-builder-arch-args.sh
-        npm run dist -- $ELECTRON_BUILDER_ARCH_ARGS  --linux --dir
+        yarn run dist -- $ELECTRON_BUILDER_ARCH_ARGS  --linux --dir
       # Bundle app and dependencies
       - cp -a dist/linux*unpacked /app/main
       # Install app wrapper
