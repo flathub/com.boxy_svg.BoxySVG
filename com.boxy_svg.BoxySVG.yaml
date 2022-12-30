@@ -29,7 +29,10 @@ modules:
     buildsystem: simple
     build-options:
       env:
+        ELECTRON_CACHE: /run/build/boxy-svg/flatpak-node/cache/electron
+        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
         XDG_CACHE_HOME: /run/build/boxy-svg/flatpak-node/cache
+        TMPDIR: /run/build/boxy-svg/flatpak-node/tmp
         npm_config_cache: /run/build/boxy-svg/flatpak-node/npm-cache
         npm_config_nodedir: /usr/lib/sdk/node16
         npm_config_offline: "true"
@@ -37,7 +40,7 @@ modules:
     sources:
       - type: archive
         url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-3.95.0.zip?alt=media
-        sha256: c8a2ca24572f7f158aadcadd4720d1f7e3c3c17f4e364db7bd405db555c21107
+        sha256: 345d8136e427a3a2146fcf222424b8836b71ed277427adc0ad26ce2a27ac8512
         dest: main
       - generated-sources.json
       - type: script
