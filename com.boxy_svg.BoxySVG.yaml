@@ -5,7 +5,7 @@ sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: "21.08"
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node14
+  - org.freedesktop.Sdk.Extension.node16
 command: boxy-svg
 tags: [proprietary]
 separate-locales: false
@@ -21,7 +21,7 @@ finish-args:
   - --filesystem=xdg-pictures
   - --filesystem=xdg-templates
 build-options:
-  append-path: /usr/lib/sdk/node14/bin
+  append-path: /usr/lib/sdk/node16/bin
   env:
     NPM_CONFIG_LOGLEVEL: info
 modules:
@@ -31,12 +31,13 @@ modules:
       env:
         XDG_CACHE_HOME: /run/build/boxy-svg/flatpak-node/cache
         npm_config_cache: /run/build/boxy-svg/flatpak-node/npm-cache
+        npm_config_nodedir: /usr/lib/sdk/node16
         npm_config_offline: "true"
     subdir: main
     sources:
       - type: archive
         url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-3.95.0.zip?alt=media
-        sha256: 379d9860125a94732f19e84997aaf8aa5723dc461e5bfcd17df68026b8298e2a
+        sha256: e20d792d141f705454b89f2aa21640a749a38c0f70bd637e7e6d54bbf3491919
         dest: main
       - generated-sources.json
       - type: script
@@ -45,12 +46,12 @@ modules:
           - zypak-wrapper.sh /app/main/boxy-svg "$@"
     build-commands:
       # Install NPM dependencies
-      - yarn install --offline
-      - yarn install --offline --prefix ./electron
+      - npm install --offline
+      - npm install --offline --prefix ./electron
       # Build the app
       - |
         . ../flatpak-node/electron-builder-arch-args.sh
-        yarn run dist -- $ELECTRON_BUILDER_ARCH_ARGS  --linux --dir
+        npm run dist -- $ELECTRON_BUILDER_ARCH_ARGS  --linux --dir
       # Bundle app and dependencies
       - cp -a dist/linux*unpacked /app/main
       # Install app wrapper
