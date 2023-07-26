@@ -1,11 +1,11 @@
 app-id: com.boxy_svg.BoxySVG
 runtime: org.freedesktop.Platform
-runtime-version: "21.08"
+runtime-version: "22.08"
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: "21.08"
+base-version: "22.08"
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node16
+  - org.freedesktop.Sdk.Extension.node18
 command: boxy-svg
 tags: [proprietary]
 separate-locales: false
@@ -21,7 +21,7 @@ finish-args:
   - --filesystem=xdg-pictures
   - --filesystem=xdg-templates
 build-options:
-  append-path: /usr/lib/sdk/node16/bin
+  append-path: /usr/lib/sdk/node18/bin
   env:
     NPM_CONFIG_LOGLEVEL: info
 modules:
@@ -31,13 +31,13 @@ modules:
       env:
         XDG_CACHE_HOME: /run/build/boxy-svg/flatpak-node/cache
         npm_config_cache: /run/build/boxy-svg/flatpak-node/npm-cache
-        npm_config_nodedir: /usr/lib/sdk/node16
+        npm_config_nodedir: /usr/lib/sdk/node18
         npm_config_offline: "true"
     subdir: main
     sources:
       - type: archive
-        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.0.3.zip?alt=media
-        sha256: e8423db0ae4d36c906d89f74c772199a17e2c627df0098f7cb6aec79df862402
+        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.1.0.zip?alt=media
+        sha256: a160e446393e8748da0226dd389785b70f67324a73492cb13ccf1305c8f116df
         dest: main
       - generated-sources.json
       - type: script
