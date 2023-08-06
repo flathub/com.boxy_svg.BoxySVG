@@ -15,6 +15,11 @@ finish-args:
   - --share=network
   - --socket=x11
   - --socket=pulseaudio
+  # These permissions are needed to make the "Open with" file manager menu item work
+  - --filesystem=xdg-desktop
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=xdg-pictures
 build-options:
   append-path: /usr/lib/sdk/node18/bin
   env:
@@ -31,8 +36,8 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.2.3.zip?alt=media
-        sha256: e092afdf3cf832bcdabe355399518da07f57ef786d017b5ae594127ca90f1090
+        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.2.4.zip?alt=media
+        sha256: 741892d6b7a6a23578e91437dcfe6c8cf405ab3ed1c99505c5b341271f35c4a0
         dest: main
       - generated-sources.json
       - type: script
