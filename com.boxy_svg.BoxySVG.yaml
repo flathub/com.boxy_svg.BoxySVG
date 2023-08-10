@@ -17,10 +17,10 @@ finish-args:
   - --socket=fallback-x11
   - --socket=pulseaudio
   # These permissions are needed to make the "Open with" file manager menu item work
-  - --filesystem=xdg-desktop:ro
-  - --filesystem=xdg-documents:ro
-  - --filesystem=xdg-download:ro
-  - --filesystem=xdg-pictures:ro
+  - --filesystem=xdg-desktop
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=xdg-pictures
 build-options:
   append-path: /usr/lib/sdk/node18/bin
   env:
@@ -38,7 +38,7 @@ modules:
     sources:
       - type: archive
         url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.5.1.zip?alt=media
-        sha256: fe67fa067c1a8ce119dbcf586474cbbc1f3ec036df59961498781361db92ec45
+        sha256: ca7720c24ef24a3597d4e479c267254aa0e4a3bba630177db33481484a48f8f5
         dest: main
       - generated-sources.json
       - type: script
