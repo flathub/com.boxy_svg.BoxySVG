@@ -13,13 +13,14 @@ finish-args:
   - --device=dri
   - --share=ipc
   - --share=network
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --socket=pulseaudio
   # These permissions are needed to make the "Open with" file manager menu item work
-  - --filesystem=xdg-desktop
-  - --filesystem=xdg-documents
-  - --filesystem=xdg-download
-  - --filesystem=xdg-pictures
+  - --filesystem=xdg-desktop:ro
+  - --filesystem=xdg-documents:ro
+  - --filesystem=xdg-download:ro
+  - --filesystem=xdg-pictures:ro
 build-options:
   append-path: /usr/lib/sdk/node18/bin
   env:
@@ -36,14 +37,15 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.4.0.zip?alt=media
-        sha256: c220af1b4112b5b207ebbbdd59d87d0bd23d885ba83c2c9e469d793d49f5ff44
+        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.5.0.zip?alt=media
+        sha256: cef7488defff9f6c592627e80764e64992c0fb2bb3f2aa6fc5101010ae44b666
         dest: main
       - generated-sources.json
       - type: script
         dest-filename: boxy-svg.sh
         commands:
-          - zypak-wrapper.sh /app/main/boxy-svg "$@"
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
+          - zypak-wrapper.sh /app/main/boxy-svg --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations "$@";
     build-commands:
       # Install NPM dependencies
       - npm install --offline
