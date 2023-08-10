@@ -1102,13 +1102,6 @@
     },
     {
         "type": "file",
-        "url": "https://registry.npmjs.org/local-fonts-manager/-/local-fonts-manager-0.9.5.tgz",
-        "sha512": "3ae2e507869c4cc9574c1051a5df6b31ded68a08d40bcec79cbaf8f119f9ef8c267f7bb2005a30bb8bc95973b4d900c2954bc98dd2b5ac87be0ad70ca72736bf",
-        "dest-filename": "e507869c4cc9574c1051a5df6b31ded68a08d40bcec79cbaf8f119f9ef8c267f7bb2005a30bb8bc95973b4d900c2954bc98dd2b5ac87be0ad70ca72736bf",
-        "dest": "flatpak-node/npm-cache/_cacache/content-v2/sha512/3a/e2"
-    },
-    {
-        "type": "file",
         "url": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
         "sha512": "bf690311ee7b95e713ba568322e3533f2dd1cb880b189e99d4edef13592b81764daec43e2c54c61d5c558dc5cfb35ecb85b65519e74026ff17675b6f8f916f4a",
         "dest-filename": "0311ee7b95e713ba568322e3533f2dd1cb880b189e99d4edef13592b81764daec43e2c54c61d5c558dc5cfb35ecb85b65519e74026ff17675b6f8f916f4a",
@@ -1246,13 +1239,6 @@
         "sha512": "89b3cade203ebda6357848c44a442433405b0aa14e6993225d14ed741d2eedbe1d8ed63a267b23bcf7541d5320eb142ddc1f1fa534d61c8f40f800e333d7ebce",
         "dest-filename": "cade203ebda6357848c44a442433405b0aa14e6993225d14ed741d2eedbe1d8ed63a267b23bcf7541d5320eb142ddc1f1fa534d61c8f40f800e333d7ebce",
         "dest": "flatpak-node/npm-cache/_cacache/content-v2/sha512/89/b3"
-    },
-    {
-        "type": "file",
-        "url": "https://registry.npmjs.org/node-addon-api/-/node-addon-api-7.0.0.tgz",
-        "sha512": "be06c12534b89b9fca904d7ab792f2d165bd873e3ab3002cb6fd21618c0cb5b1bb0339d184dc9f2d17bc1d9022588a5c1f3a0eec7c612ee0508fdac9fc7a3464",
-        "dest-filename": "c12534b89b9fca904d7ab792f2d165bd873e3ab3002cb6fd21618c0cb5b1bb0339d184dc9f2d17bc1d9022588a5c1f3a0eec7c612ee0508fdac9fc7a3464",
-        "dest": "flatpak-node/npm-cache/_cacache/content-v2/sha512/be/06"
     },
     {
         "type": "file",
@@ -2533,21 +2519,9 @@
     },
     {
         "type": "inline",
-        "contents": "9cab5e5c42890861aa9eed3d0e63e512cc58aad2\t{\"key\": \"make-fetch-happen:request-cache:https://registry.npmjs.org/node-addon-api/-/node-addon-api-7.0.0.tgz\", \"integrity\": \"sha512-vgbBJTS4m5/KkE16t5Ly0WW9hz46swAstv0hYYwMtbG7AznRhNyfLRe8HZAiWIpcHzoO7HxhLuBQj9rJ/Ho0ZA==\", \"time\": 0, \"size\": 59884, \"metadata\": {\"url\": \"https://registry.npmjs.org/node-addon-api/-/node-addon-api-7.0.0.tgz\", \"reqHeaders\": {}, \"resHeaders\": {}}}",
-        "dest-filename": "562026824f1fa2ebb012c1c173b4df619dd80a61235fc8dd0d4039c53d2b",
-        "dest": "flatpak-node/npm-cache/_cacache/index-v5/98/93"
-    },
-    {
-        "type": "inline",
         "contents": "9d139dd2cc35f03cf797ddcd150d8d1c96ba5116\t{\"key\": \"make-fetch-happen:request-cache:https://registry.npmjs.org/@types/verror/-/verror-1.10.6.tgz\", \"integrity\": \"sha512-NNm+gdePAX1VGvPcGZCDKQZKYSiAWigKhKaz5KF94hG6f2s8de9Ow5+7AbXoeKxL8gavZfk4UquSAygOF2duEQ==\", \"time\": 0, \"size\": 2558, \"metadata\": {\"url\": \"https://registry.npmjs.org/@types/verror/-/verror-1.10.6.tgz\", \"reqHeaders\": {}, \"resHeaders\": {}}}",
         "dest-filename": "6102376f48e3a0938ecf607ce4e2ad1090f8fdc28cde1916b2ecd944e6fc",
         "dest": "flatpak-node/npm-cache/_cacache/index-v5/ff/95"
-    },
-    {
-        "type": "inline",
-        "contents": "9d3e1d28e913447d70e32090834172700465ea35\t{\"key\": \"make-fetch-happen:request-cache:https://registry.npmjs.org/local-fonts-manager/-/local-fonts-manager-0.9.5.tgz\", \"integrity\": \"sha512-OuLlB4acTMlXTBBRpd9rMd7WigjUC87HnLr48Rn574wmf3uyAFowu4vJWXO02QDClUvJjdK1rIe+CtcMpyc2vw==\", \"time\": 0, \"size\": 4023, \"metadata\": {\"url\": \"https://registry.npmjs.org/local-fonts-manager/-/local-fonts-manager-0.9.5.tgz\", \"reqHeaders\": {}, \"resHeaders\": {}}}",
-        "dest-filename": "547e8369f7d920cc2497b2e9533c5c58cdddcb480ec0012b2e4d7aae324a",
-        "dest": "flatpak-node/npm-cache/_cacache/index-v5/28/76"
     },
     {
         "type": "inline",
@@ -3080,8 +3054,8 @@
     {
         "type": "script",
         "commands": [
-            "$FLATPAK_BUILDER_BUILDDIR/flatpak-node/patch.sh",
-            "$FLATPAK_BUILDER_BUILDDIR/flatpak-node/patch/electron.sh"
+            "$FLATPAK_BUILDER_BUILDDIR/flatpak-node/patch/electron.sh",
+            "$FLATPAK_BUILDER_BUILDDIR/flatpak-node/patch.sh"
         ],
         "dest-filename": "patch-all.sh",
         "dest": "flatpak-node"
