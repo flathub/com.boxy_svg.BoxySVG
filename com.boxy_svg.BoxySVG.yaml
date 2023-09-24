@@ -1,9 +1,9 @@
 app-id: com.boxy_svg.BoxySVG
 runtime: org.freedesktop.Platform
-runtime-version: "22.08"
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: "22.08"
+base-version: "23.08"
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node18
 command: boxy-svg
@@ -32,8 +32,8 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.12.3.zip?alt=media
-        sha256: 30e684daa616839fc1907a39a213c736fd23b04c9282a80cc7e13b75efdf2aa7
+        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.12.4.zip?alt=media
+        sha256: d664272c5fe624d7c84ba37419617a5b8e26196cf76b6783a4469f91c560c11b
         dest: main
       - generated-sources.json
       - type: script
