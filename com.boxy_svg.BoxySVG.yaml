@@ -13,8 +13,7 @@ finish-args:
   - --device=dri
   - --share=ipc
   - --share=network
-  - --socket=wayland
-  - --socket=fallback-x11
+  - --socket=x11
   - --socket=pulseaudio
 build-options:
   append-path: /usr/lib/sdk/node18/bin
@@ -32,15 +31,15 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.12.5.zip?alt=media
-        sha256: 7b6bdabb8f73a35f6b61a4f88d95ab01c8223d8cc0517507cc7d568c1de2f27a
+        url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.14.0.zip?alt=media
+        sha256: ba6b535b013a1a757819e5661e9e8cf388d2db71a07b55300390fa84991b9f79
         dest: main
       - generated-sources.json
       - type: script
         dest-filename: boxy-svg.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - zypak-wrapper.sh /app/main/boxy-svg --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations "$@";
+          - zypak-wrapper.sh /app/main/boxy-svg "$@"
     build-commands:
       # Install NPM dependencies
       - npm install --offline
