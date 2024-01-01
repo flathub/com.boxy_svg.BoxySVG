@@ -32,7 +32,7 @@ modules:
     sources:
       - type: archive
         url: https://firebasestorage.googleapis.com/v0/b/boxy-svg.appspot.com/o/linux%2Fapp-4.20.0.zip?alt=media
-        sha256: 82e907ca9c83aa007ee95d780617c56bef81bb608e34bcc5533b62f35d1e6404
+        sha256: 4e4a7456ad0cdba3b4e28d205ca5e575cac742199f74a9171096a28a5cab1e72
         dest: main
       - generated-sources.json
       - type: script
