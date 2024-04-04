@@ -31,8 +31,8 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://storage.boxy-svg.com/linux/app-4.27.3.zip
-        sha256: b1ecddaa4a717453db9d907dfbee2adfd295677a7625737250ed8939e12a4f9f
+        url: https://storage.boxy-svg.com/linux/app-4.29.0.zip
+        sha256: 33b905b1f7202d733cec4fe3d985f2c8a7b779b4a8726eae9f4c86bfbefb062c
         dest: main
       - generated-sources.json
       - type: script
