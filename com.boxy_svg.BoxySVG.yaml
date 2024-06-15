@@ -14,7 +14,6 @@ finish-args:
   - --share=ipc
   - --share=network
   - --socket=x11
-  - --socket=pulseaudio
 build-options:
   append-path: /usr/lib/sdk/node18/bin
   env:
@@ -31,8 +30,8 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://storage.boxy-svg.com/linux/app-4.32.2.zip
-        sha256: c2c45c063e40bfb54a902021bfe48cc63e01761123ea7bc4a92ef146da1e6022
+        url: https://storage.boxy-svg.com/linux/app-4.33.1.zip
+        sha256: 103db3bae9966c9a0185d3b603cf7f28e1ef653ac192ee2ff2c3a25e132e78cb
         dest: main
       - generated-sources.json
       - type: script
