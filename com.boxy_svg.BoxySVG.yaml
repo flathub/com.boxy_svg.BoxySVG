@@ -1,11 +1,11 @@
 app-id: com.boxy_svg.BoxySVG
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: "23.08"
+base-version: "24.08"
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node18
+  - org.freedesktop.Sdk.Extension.node20
 command: boxy-svg
 tags: [proprietary]
 separate-locales: false
@@ -15,7 +15,7 @@ finish-args:
   - --share=network
   - --socket=x11
 build-options:
-  append-path: /usr/lib/sdk/node18/bin
+  append-path: /usr/lib/sdk/node20/bin
   env:
     NPM_CONFIG_LOGLEVEL: info
 modules:
@@ -25,13 +25,13 @@ modules:
       env:
         XDG_CACHE_HOME: /run/build/boxy-svg/flatpak-node/cache
         npm_config_cache: /run/build/boxy-svg/flatpak-node/npm-cache
-        npm_config_nodedir: /usr/lib/sdk/node18
+        npm_config_nodedir: /usr/lib/sdk/node20
         npm_config_offline: "true"
     subdir: main
     sources:
       - type: archive
-        url: https://storage.boxy-svg.com/flathub/app-4.37.0.zip
-        sha256: e8c46dad089fc63df1eea29e52f1d5386a3d1c475b398fd56935a67f869ca3ac
+        url: https://storage.boxy-svg.com/flathub/app-4.41.0.zip
+        sha256: ddf53b6fd44eeb7a12032e6c44565d6bf53d94358492cfc58e9e8ea7f6a85b45
         dest: main
       - generated-sources.json
       - type: script
