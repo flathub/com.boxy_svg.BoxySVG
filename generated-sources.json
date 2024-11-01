@@ -185,10 +185,10 @@
     },
     {
         "type": "file",
-        "url": "https://registry.npmjs.org/@types/node/-/node-20.17.4.tgz",
-        "sha512": "162d418fca9326be1fd450dd1c547ba0c94e6b01184b390735d0492be6918dc0c3347c045778cf3e3b993f62e1d903605deab333c63e53a6fabab280a20dab67",
-        "dest-filename": "418fca9326be1fd450dd1c547ba0c94e6b01184b390735d0492be6918dc0c3347c045778cf3e3b993f62e1d903605deab333c63e53a6fabab280a20dab67",
-        "dest": "flatpak-node/npm-cache/_cacache/content-v2/sha512/16/2d"
+        "url": "https://registry.npmjs.org/@types/node/-/node-20.17.5.tgz",
+        "sha512": "9fc15863fa51c6ee3deb8e3580870040564f2976e1b1de9567281cabe3d3499ef978c87f29ed2108044e7546b6d6a885a8a36c3cf622738eb25c33b524688f05",
+        "dest-filename": "5863fa51c6ee3deb8e3580870040564f2976e1b1de9567281cabe3d3499ef978c87f29ed2108044e7546b6d6a885a8a36c3cf622738eb25c33b524688f05",
+        "dest": "flatpak-node/npm-cache/_cacache/content-v2/sha512/9f/c1"
     },
     {
         "type": "file",
@@ -2347,12 +2347,6 @@
     },
     {
         "type": "inline",
-        "contents": "67b43cf8117ded7b350dd64ac5384b203caa4fa2\t{\"key\": \"make-fetch-happen:request-cache:https://registry.npmjs.org/@types/node/-/node-20.17.4.tgz\", \"integrity\": \"sha512-Fi1Bj8qTJr4f1FDdHFR7oMlOawEYSzkHNdBJK+aRjcDDNHwEV3jPPjuZP2Lh2QNgXeqzM8Y+U6b6urKAog2rZw==\", \"time\": 0, \"size\": 406966, \"metadata\": {\"url\": \"https://registry.npmjs.org/@types/node/-/node-20.17.4.tgz\", \"reqHeaders\": {}, \"resHeaders\": {}}}",
-        "dest-filename": "eb7ee1d740ef960ad47e6014e8630948041586f02c5e14a1af682aa1a767",
-        "dest": "flatpak-node/npm-cache/_cacache/index-v5/c4/b9"
-    },
-    {
-        "type": "inline",
         "contents": "68f564140c592c4f1e64586672d73993310c8c32\t{\"key\": \"make-fetch-happen:request-cache:https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.1.tgz\", \"integrity\": \"sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==\", \"time\": 0, \"size\": 1894, \"metadata\": {\"url\": \"https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.1.tgz\", \"reqHeaders\": {}, \"resHeaders\": {}}}",
         "dest-filename": "393eb6f1cdd50a93cb92ed56af16a93821a9263f732f369d831c48199a58",
         "dest": "flatpak-node/npm-cache/_cacache/index-v5/ca/c1"
@@ -2560,6 +2554,12 @@
         "contents": "8cd034fb9b8408ddc0dcff1997afa989aa72470d\t{\"key\": \"make-fetch-happen:request-cache:https://registry.npmjs.org/builder-util/-/builder-util-24.8.1.tgz\", \"integrity\": \"sha512-ibmQ4BnnqCnJTNrdmdNlnhF48kfqhNzSeqFMXHLIl+o9/yhn6QfOaVrloZ9YUu3m0k3rexvlT5wcki6LWpjTZw==\", \"time\": 0, \"size\": 33553, \"metadata\": {\"url\": \"https://registry.npmjs.org/builder-util/-/builder-util-24.8.1.tgz\", \"reqHeaders\": {}, \"resHeaders\": {}}}",
         "dest-filename": "114ce67450075c62e2ab166ba8439e74dd81d7c96007a6e31ae26f8c26c9",
         "dest": "flatpak-node/npm-cache/_cacache/index-v5/3c/91"
+    },
+    {
+        "type": "inline",
+        "contents": "8e6d6610e107a57586c42912b1eeb0e86e3a6061\t{\"key\": \"make-fetch-happen:request-cache:https://registry.npmjs.org/@types/node/-/node-20.17.5.tgz\", \"integrity\": \"sha512-n8FYY/pRxu496441gIcAQFZPKXbhsd6VZygcq+PTSZ75eMh/Ke0hCAROdUa21qiFqKNsPPYic46yXDO1JGiPBQ==\", \"time\": 0, \"size\": 406415, \"metadata\": {\"url\": \"https://registry.npmjs.org/@types/node/-/node-20.17.5.tgz\", \"reqHeaders\": {}, \"resHeaders\": {}}}",
+        "dest-filename": "911f71bdf4ad1b7f90d0286c0a5968380daf218da99fde0f6bd58fa851f0",
+        "dest": "flatpak-node/npm-cache/_cacache/index-v5/94/5b"
     },
     {
         "type": "inline",
@@ -3236,8 +3236,8 @@
     {
         "type": "script",
         "commands": [
-            "$FLATPAK_BUILDER_BUILDDIR/flatpak-node/patch.sh",
-            "$FLATPAK_BUILDER_BUILDDIR/flatpak-node/patch/electron.sh"
+            "$FLATPAK_BUILDER_BUILDDIR/flatpak-node/patch/electron.sh",
+            "$FLATPAK_BUILDER_BUILDDIR/flatpak-node/patch.sh"
         ],
         "dest-filename": "patch-all.sh",
         "dest": "flatpak-node"
