@@ -30,8 +30,8 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://storage.boxy-svg.com/flathub/app-4.62.0.zip
-        sha256: ba5b5d1666258a63f48a0e82d23b7f52b152e555f78c4bad65a103d7c60b758e
+        url: https://storage.boxy-svg.com/flathub/app-4.62.2.zip
+        sha256: a2bff13cf3cd8cb758854244311d77e0fb2888e4a7493d04d428dd45ad2b9fe6
         dest: main
       - generated-sources.json
       - type: script
