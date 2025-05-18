@@ -4,8 +4,6 @@ runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: "24.08"
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node20
 command: boxy-svg
 tags: [proprietary]
 separate-locales: false
@@ -14,45 +12,33 @@ finish-args:
   - --share=ipc
   - --share=network
   - --socket=x11
-build-options:
-  append-path: /usr/lib/sdk/node20/bin
-  env:
-    NPM_CONFIG_LOGLEVEL: info
 modules:
   - name: boxy-svg
     buildsystem: simple
-    build-options:
-      env:
-        XDG_CACHE_HOME: /run/build/boxy-svg/flatpak-node/cache
-        npm_config_cache: /run/build/boxy-svg/flatpak-node/npm-cache
-        npm_config_nodedir: /usr/lib/sdk/node20
-        npm_config_offline: "true"
     subdir: main
     sources:
       - type: archive
-        url: https://storage.boxy-svg.com/flathub/app-4.66.0.zip
-        sha256: a74248d9c75785ca27f65c522e552b3068f70c8adb1b4dc2da7bb6a13e1995fd
+        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.69.0-linux-x64.zip
+        sha256: 30b36f284ca7315ae01218e59dc329b8edf377b673e038ad8a5d2be2ba0545eb
         dest: main
-      - generated-sources.json
+        only-arches: [x86_64]
+      - type: archive
+        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.69.0-linux-arm64.zip
+        sha256: 997cd1ac8e0fe0631b06736131841c073bf1411d1fea2b4433aa2855cecae5a5
+        dest: main
+        only-arches: [aarch64]
       - type: script
         dest-filename: boxy-svg.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - zypak-wrapper.sh /app/main/boxy-svg "$@"
     build-commands:
-      # Install NPM dependencies
-      - npm install --offline
-      - npm install --offline --prefix ./electron
-      # Build the app
-      - |
-        . ../flatpak-node/electron-builder-arch-args.sh
-        npm run dist -- $ELECTRON_BUILDER_ARCH_ARGS  --linux --dir
-      # Bundle app and dependencies
-      - cp -a dist/linux*unpacked /app/main
+      # Copy over the app bundle
+      - cp -a ./ /app/main
       # Install app wrapper
       - install ../boxy-svg.sh ${FLATPAK_DEST}/bin/boxy-svg
       # Install app metadata
       - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
       - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.desktop     $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
       - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.svg         $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
-      - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.png         $FLATPAK_DEST/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
+      - install -Dm644 ./metadata/com.boxy_svg.BoxySVG.png         $FLATPAK_DEST/share/icons/hicolor/256x256/apps/$FLATPAK_ID.png
