@@ -1,9 +1,9 @@
 app-id: com.boxy_svg.BoxySVG
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: "24.08"
+base-version: "25.08"
 command: boxy-svg
 tags: [proprietary]
 separate-locales: false
@@ -18,13 +18,13 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.79.0-linux-x64.zip
-        sha256: 80fa5cc754ad1c3588dcff51bc408d3ae40a6947dbe4b3d228c5b1de9e8d0fa6
+        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.81.0-linux-x64.zip
+        sha256: 94c5f471995f05a8d660ffa237b73bd56e684bfa7d4b0d6a0711f2c496e54da7
         dest: main
         only-arches: [x86_64]
       - type: archive
-        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.79.0-linux-arm64.zip
-        sha256: 58db3ea7c56f232b6586a86e449bb64f7e9b7d6347fdcfb7ada7a451fe9bd369
+        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.81.0-linux-arm64.zip
+        sha256: 13bc6a08dfa72b1da8fefc1ede8b1afd2e625df27ea0f1741fcce6be70a80cb3
         dest: main
         only-arches: [aarch64]
       - type: script
