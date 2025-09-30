@@ -33,7 +33,7 @@ modules:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - zypak-wrapper.sh /app/main/boxy-svg "$@"
     build-commands:
-      # Copy over the app bundle
+      # Copy app bundle
       - cp -a ./ /app/main
       # Install app wrapper
       - install ../boxy-svg.sh ${FLATPAK_DEST}/bin/boxy-svg
