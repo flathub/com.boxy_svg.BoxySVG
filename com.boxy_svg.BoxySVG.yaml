@@ -18,13 +18,13 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.84.0-linux-x64.zip
-        sha256: cf9e7f6dd931de8c1bb29e953aa750e34b287f058f26f8e0874c1d9e7f65f038
+        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.84.1-linux-x64.zip
+        sha256: 70ae6c9fc14a9fb78dd71ddb128b1340e0b3735246e3be925f304c0f1c4ea936
         dest: main
         only-arches: [x86_64]
       - type: archive
-        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.84.0-linux-arm64.zip
-        sha256: 6a2354aa83bab7151291cefbc2d2614fb55a938f81b3b0bb8c25f9a465bdd043
+        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.84.1-linux-arm64.zip
+        sha256: bfff324c5cb434aff8a3de59cc3f1e34e63255e48d71838f427b6d73e0eb5057
         dest: main
         only-arches: [aarch64]
       - type: script
@@ -33,7 +33,7 @@ modules:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - zypak-wrapper.sh /app/main/boxy-svg "$@"
     build-commands:
-      # Copy app bundle
+      # Copy over the app bundle
       - cp -a ./ /app/main
       # Install app wrapper
       - install ../boxy-svg.sh ${FLATPAK_DEST}/bin/boxy-svg
