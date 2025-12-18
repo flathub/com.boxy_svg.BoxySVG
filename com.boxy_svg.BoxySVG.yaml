@@ -19,13 +19,13 @@ modules:
     subdir: main
     sources:
       - type: archive
-        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.93.2-linux-x64.zip
-        sha256: 0dfe644fb36ac4492fbba95c4e0a4ec5fb9cbc9e9c59a3971f7f55e5be9a2eba
+        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.94.0-linux-x64.zip
+        sha256: 2b66954bd4c341aebf0648da8cd54677f3e473ddd918df5a15e187a21dd0a0ad
         dest: main
         only-arches: [x86_64]
       - type: archive
-        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.93.2-linux-arm64.zip
-        sha256: f4a0d9a6e2f75d1efb5c4368ee4d87df5e5c4913a9cd3e3761702862c48941ad
+        url: https://storage.boxy-svg.com/builds/boxy-svg-v4.94.0-linux-arm64.zip
+        sha256: 6ef01394a32e1d9d19dba9c7dfaca3c8b308e2d502fc2ff378bfcd48f5815a0f
         dest: main
         only-arches: [aarch64]
     build-commands:
